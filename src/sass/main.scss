@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+// Import a Google Font
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
+//   @import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+
+// Set your brand colors
+$green: #ea8685;
+$yellow: #f7d794;
+$red: #f19066;
+$blue: #63cdda;
+$grey: #303952;
+$indigo: #778beb;
+$beige: #546de5;
+
+// // Update Bulma's global variables
+$dark: $grey;
+$success: $green;
+$success-invert: #ffffff;
+$warning: $yellow;
+$warning-invert: #ffffff;
+$danger: $red;
+$info: $blue;
+$info-invert: #ffffff;
+$primary: $beige;
+$primary-invert: #ffffff;
+$family-sans-serif: "Amatic SC";
+
+$gap: 256px;
+// $grey-dark: $brown;
+// $grey-light: $beige-light;
+// $primary: $purple;
+// $link: $pink;
+// $widescreen-enabled: false;
+// $fullhd-enabled: false;
+
+// // Update some of Bulma's component variables
+// $body-background-color: $grey;
+// $control-border-width: 2px;
+// $input-border-color: transparent;
+// $input-shadow: none;
+
+// $family-sans-serif: "Cinzel";
+// $body-background-color: #ecf0f1;
+// $navbar-background-color: transparent;
+// $navbar-dropdown-background-color: transparent;
+// $navbar-item-hover-background-color: transparent;
+
+// $navbar-tab-hover-border-bottom-color: #ecf0f1;
+// $navbar-tab-active-border-bottom-color: #ecf0f1;
+// $navbar-item-hover-color: #ecf0f1;
+// $navbar-tab-active-color: #ffffff;
+
+// $modal-content-width: calc(80vw - 80px);
+
+// $navbar-item-color: #ffffff;
+// Import only what you need from Bulma
+@import "../../node_modules/bulma/bulma.sass";
+@import "../../node_modules/bulma-steps-component/bulma-steps.sass";
+// @import "../../node_modules/bulma-extensions/bulma-checkradio/dist/css/bulma-checkradio.sass";
+// @import "../../node_modules/bulma-extensions/bulma-calendar/src/sass/index.sass";
+// @import "../../node_modules/bulma-extensions/bulma-calendar/src/sass/timepicker.sass";
