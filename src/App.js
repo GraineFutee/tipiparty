@@ -7,17 +7,24 @@ function App() {
 
   const svgVariants = {
     hidden: { opacity: 0, rotateY: -180 },
-    visible: { opacity: 1, rotateY: 0, transition: { duration: 2.5 } },
+    visible: {
+      opacity: 1,
+      rotateY: 0,
+      transition: { duration: 2 },
+    },
   };
   const pathVariants = {
     hidden: { pathLength: 0 },
-    visible: { pathLength: 1, transition: { duration: 3, ease: "easeInOut" } },
+    visible: {
+      pathLength: 1,
+      transition: { duration: 1.5, ease: "easeInOut" },
+    },
   };
   const polygonVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { delay: 3, duration: 2, ease: "easeInOut" },
+      transition: { delay: 2, duration: 1, ease: "easeInOut" },
     },
   };
 
@@ -83,20 +90,44 @@ function App() {
                 height="260"
                 width="200"
               >
+                <defs>
+                  <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop
+                      offset="0%"
+                      style={{ stopColor: "#e15f41", stopOpacity: 1 }}
+                    />
+                    <stop
+                      offset="100%"
+                      style={{ stopColor: "#f5cd79", stopOpacity: 1 }}
+                    />
+                  </linearGradient>
+                  <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop
+                      offset="0%"
+                      style={{ stopColor: "#f8a5c2", stopOpacity: 1 }}
+                    />
+                    <stop
+                      offset="100%"
+                      style={{ stopColor: "#e66767", stopOpacity: 1 }}
+                    />
+                  </linearGradient>
+                </defs>
                 <motion.polygon
                   variants={polygonVariants}
                   points="100,25 200,200 150,225 100,150"
-                  style={{ fill: "#ea8685" }}
+                  style={{ fill: "url(#grad2)" }}
                 />
                 <motion.polygon
                   variants={polygonVariants}
                   points="100,25 0,200 50,225 100,150"
-                  style={{ fill: "#ea8685" }}
+                  style={{ fill: "url(#grad2)" }}
                 />
                 <motion.polygon
                   variants={polygonVariants}
                   points="100,150 150,225 100,250 50,225"
-                  style={{ fill: "#f7d794" }}
+                  style={{
+                    fill: "url(#grad1)",
+                  }}
                 />
                 <motion.path
                   variants={pathVariants}
